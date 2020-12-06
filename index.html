@@ -1,0 +1,62 @@
+<html>
+<head>
+
+    <style>
+       #divx
+	   { 
+		 margin-left:25%; 
+	   }
+	   #recherche
+	   {
+	     width:600px;
+	   }
+	   #image
+	   {
+	    margin-top:100px;
+		 margin-left:30%;
+	     width:400px;
+		 height:200px;
+	   }
+	   #resultat
+	   {
+	    margin-left:23%;
+	   }
+	   img{
+	   width: 300px;
+	   height: 300px;
+	   }
+    </style>
+	
+	 <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui"></script> 
+   <script src="aajaxio.js"></script>
+   
+  
+</head>
+<body>
+<img id="image" src="moteur.png" />
+     <div id="divx" >
+	 
+	 <form>
+	        <input type="text" name="recherche" id="recherche" />
+	 </form>
+	 </div>
+	 <div id="resultat">
+	  <ul type="none">
+	  
+	  </ul>
+	 </div>
+	 <div id="affichage">
+	           ecran
+	 </div>
+	 <script> 
+   var divx=document.getElementById('resultat');
+   divx.addEventListener('click',function(e){
+   //alert(e.target.innerText);},false);
+  var lien=e.target.innerText;
+  $.post('page2.php',{tlien:lien},function(data){$('#affichage').html(data);});
+  },false);
+    </script>
+</body>
+</html>
+ 

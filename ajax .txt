@@ -1,0 +1,6 @@
+ajax est la clé du web ; donc j'envoie les données de page en page en restant ds la mm page
+
+si les photo ne sont pas tous jpg j'utilise le REJEX
+
+
+j'utilise 2 page php par l'ajax je compare vc la base de donnée et j'affiche les resultat ds le div
