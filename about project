@@ -1,0 +1,3 @@
+create database name google
+create table name moteur
+ (`id`, `mot`, `description`, `image`)
